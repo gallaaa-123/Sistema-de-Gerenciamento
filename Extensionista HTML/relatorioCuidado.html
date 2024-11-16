@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Peludinhos UFPA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="file2.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="file.png" alt="Logo" style="max-width: 100px; height: auto;">
+        </a>
+        <h1 style="width: auto;">Projeto Peludinhos UFPA</h1>
+        <nav>
+            <ul>
+                <li><a href="cadastroAnimal.html" id="cadastrarAnimal">Cadastrar Animal</a></li>
+                <li><a href="consultaAnimal.html" id="consultarAnimais">Consultar Animais</a></li>
+                <li><a href="cadastroAlimentacao.html" id="registrarAlimentacao">Registrar Alimentação</a></li>
+                <li><a href="relatorioCuidado.html" id="gerarRelatorio">Gerar Relatório de Cuidados</a></li>
+                <li><a href="relatorioGastos.html" id="controleGastos">Controle de Gastos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <h2>Gerar Relatório de Cuidados</h2>
+        <form>
+            <label for="animalId">ID do animal:</label>
+            <input type="text" id="animalId" name="animalId" pattern="[A-Za-z0-9]+" title="Use letras e números"><br>
+
+            <button type="submit">Gerar Relatório</button>
+        </form>
+
+        <div id="relatorioTabela"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

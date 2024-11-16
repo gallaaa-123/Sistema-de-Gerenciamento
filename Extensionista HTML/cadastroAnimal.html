@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Peludinhos UFPA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="file2.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="file.png" alt="Logo" style="max-width: 100px; height: auto;">
+        </a>
+        <h1 style="width: auto;">Projeto Peludinhos UFPA</h1>
+        <nav>
+            <ul>
+                <li><a href="cadastroAnimal.html" id="cadastrarAnimal">Cadastrar Animal</a></li>
+                <li><a href="consultaAnimal.html" id="consultarAnimais">Consultar Animais</a></li>
+                <li><a href="cadastroAlimentacao.html" id="registrarAlimentacao">Registrar Alimentação</a></li>
+                <li><a href="relatorioCuidado.html" id="gerarRelatorio">Gerar Relatório de Cuidados</a></li>
+                <li><a href="relatorioGastos.html" id="controleGastos">Controle de Gastos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <h2>Cadastrar Animal</h2>
+        <form id="animalForm">
+            <label for="nome">Nome do animal:</label>
+            <input type="text" id="nome" name="nome" required><br>
+
+            <label for="especie">Espécie:</label>
+            <input type="text" id="especie" name="especie" required><br>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required><br>
+
+            <label for="peso">Peso:</label>
+            <input type="number" id="peso" name="peso" required><br>
+
+            <label for="pelagem">Pelagem:</label>
+            <input type="text" id="pelagem" name="pelagem" required><br>
+
+            <label for="castrado">Castrado:</label>
+            <select id="castrado" name="castrado" required>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select><br>
+
+            <label for="lesao">Lesão:</label>
+            <select id="lesao" name="lesao" onchange="toggleLesao(this)">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select><br>
+
+            <div id="localizacaoLesaoDiv" style="display:none;">
+                <label for="localizacaoLesao">Localização da Lesão:</label>
+                <input type="text" id="localizacaoLesao" name="localizacaoLesao"><br>
+            </div>
+
+            <label for="teveFilhotes">Já teve filhotes:</label>
+            <select id="teveFilhotes" name="teveFilhotes" onchange="toggleFilhotes(this)">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select><br>
+
+            <div id="quantidadeFilhotesDiv" style="display:none;">
+                <label for="quantidadeFilhotes">Quantidade aproximada de filhotes:</label>
+                <input type="number" id="quantidadeFilhotes" name="quantidadeFilhotes"><br>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
